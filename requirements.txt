@@ -1,0 +1,13 @@
+mlflow
+python-box==6.0.2
+ensure==1.0.2
+types-PyYAML
+Flask
+Flask-Cors
+gdown
+dvc
+tqdm
+joblib
+pyYAML
+notebook
+-e .
