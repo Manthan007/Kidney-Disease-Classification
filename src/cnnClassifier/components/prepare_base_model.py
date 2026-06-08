@@ -7,6 +7,12 @@ import tensorflow as tf
 from cnnClassifier.entity.config_entity import PrepareBaseModelConfig
 
 
+import os
+import urllib.request as request
+from zipfile import ZipFile
+import tensorflow as tf
+
+
 class PrepareBaseModel:
     def __init__(self, config: PrepareBaseModelConfig):
         self.config = config
@@ -34,10 +40,15 @@ class PrepareBaseModel:
                 model.trainable = False
 
         flatten_in = tf.keras.layers.Flatten()(model.output)
+
+        x = tf.keras.layers.Dropout(0.6)(flatten_in)
+        x = tf.keras.layers.Dense(128, activation="relu")(x)
+        x = tf.keras.layers.Dropout(0.3)(x)
+
         prediction = tf.keras.layers.Dense(
             units=classes,
             activation="softmax"
-        )(flatten_in)
+        )(x)
 
         full_model = tf.keras.models.Model(
             inputs=model.input,
