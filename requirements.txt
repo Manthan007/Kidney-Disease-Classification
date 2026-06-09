@@ -11,4 +11,8 @@ joblib
 pyYAML
 notebook
 dagshub
+numpy
+pandas 
+scipy
+tensorflow
 -e .
