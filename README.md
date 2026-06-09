@@ -88,7 +88,7 @@ pip install -r requirements.txt
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 
+    - Save the URI: <YOUR-ECR-URI>
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -122,9 +122,9 @@ pip install -r requirements.txt
 
     AWS_SECRET_ACCESS_KEY=
 
-    AWS_REGION = us-east-1
+    AWS_REGION = ap-southeast-2
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = <YOUR-ECR-URI>
 
     ECR_REPOSITORY_NAME = simple-app
 
