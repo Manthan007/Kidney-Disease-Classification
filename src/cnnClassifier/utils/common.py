@@ -9,6 +9,7 @@ from box import ConfigBox
 from pathlib import Path
 from typing import Any
 import base64
+import shutil
 
 
 
@@ -135,3 +136,21 @@ def decodeImage(imgstring, fileName):
 def encodeImageIntoBase64(croppedImagePath):
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())
+
+
+def copy_model_to_folder(source_path: str, target_folder: str):
+    """
+    Copies the model from the artifacts folder to a new production folder.
+    """
+    source = Path(source_path)
+    destination_folder = Path(target_folder)
+    
+    # Create the folder if it doesn't exist
+    os.makedirs(destination_folder, exist_ok=True)
+    
+    # Define destination path
+    destination_path = destination_folder / source.name
+    
+    # Copy the file
+    shutil.copy2(source, destination_path)
+    logger.info(f"Model successfully copied to {destination_path}")

@@ -1,6 +1,8 @@
 import mlflow
 import dagshub
 
+from cnnClassifier.utils.common import copy_model_to_folder
+
 # Initialize DagsHub integration
 dagshub.init(repo_owner="Manthan007", repo_name="Kidney-Disease-Classification", mlflow=True)
 
@@ -28,6 +30,10 @@ if __name__ == '__main__':
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<<<")
         obj = ModelEvaluationPipeline()
         obj.main()
+        copy_model_to_folder(
+            source_path="artifacts/training/model.keras", 
+            target_folder="model"
+        )
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<<<")
     except Exception as e:
         raise e
