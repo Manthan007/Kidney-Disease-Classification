@@ -55,7 +55,7 @@ pip install -r requirements.txt
 3. dvc dag
 
 
-<!-- # AWS-CICD-Deployment-with-Github-Actions
+# AWS-CICD-Deployment-with-Github-Actions
 
 ## 1. Login to AWS console.
 
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
+    - Save the URI: 
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -146,4 +146,4 @@ DVC
 
  - Its very lite weight for POC only
  - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines) --> -->
+ - It can perform Orchestration (Creating Pipelines) -->
