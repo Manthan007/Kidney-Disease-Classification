@@ -26,8 +26,17 @@ class TrainingConfig:
     trained_model_path: Path
     updated_base_model_path: Path
     training_data: Path
+    all_params: dict
     params_epochs: int
     params_batch_size: int
     params_is_augmentation: bool
     params_image_size: list
     params_learning_rate: float
+
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_to_model: Path
+    training_data: Path
+    all_params: dict   
+    params_image_size: list
+    params_batch_size: int

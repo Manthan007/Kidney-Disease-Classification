@@ -39,48 +39,16 @@ pip install -r requirements.txt
 ```
 
 
-<!-- ```bash
-# Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up you local host and port
-```
-
-
-### DVC cmd
-
-1. dvc init
-2. dvc repro
-3. dvc dag
-
-
 ## MLflow
 
 [Documentation](https://mlflow.org/docs/latest/index.html)
 
 
-##### cmd
-- mlflow ui
-
 ### dagshub
 [dagshub](https://dagshub.com/)
 
 
-```bash
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/MLflow-DVC-Chicken-Disease-Classification.mlflow
-
-export MLFLOW_TRACKING_USERNAME=entbappy 
-
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 
-
-```
-
-
-# AWS-CICD-Deployment-with-Github-Actions
+<!-- # AWS-CICD-Deployment-with-Github-Actions
 
 ## 1. Login to AWS console.
 
@@ -171,4 +139,4 @@ DVC
 
  - Its very lite weight for POC only
  - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines) -->
+ - It can perform Orchestration (Creating Pipelines) --> -->
